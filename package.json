@@ -1,0 +1,13 @@
+{
+  "name"          : "gsheet-web",
+  "description"   : "",
+  "url"           : "http://github.com/digplan/gsheet-web/",
+  "keywords"      : ["util", "nodejs", "express", "web", "spreadsheet"],
+  "author"        : "C Borkert <>",
+  "main": "gsheet.js",
+  "repository": {
+  	"type": "git",
+ 	  "url": "git://github.com/digplan/gsheet-web"
+  },
+  "version"       : "0.0.1"
+}
