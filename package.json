@@ -9,5 +9,8 @@
   	"type": "git",
  	  "url": "git://github.com/digplan/gsheet-web"
   },
-  "version"       : "0.0.2"
+  "dependencies" : { 
+    "google-spreadsheet" : ""
+  },
+  "version"       : "0.0.4"
 }
