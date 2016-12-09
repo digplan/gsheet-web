@@ -1,6 +1,7 @@
-Pull Google Spreadsheet as a JSON file to serve on a Node website
+Pull Public Google Spreadsheet as a JSON file (array of objects).  Simple.
 ````
-var gsheet = require('gsheet-web')(sheet_id);
-var data = gsheet.get();
-gsheet.put(data);
+var gsheet = require('gsheet-web');
+gsheet.get('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo', function(data){
+  console.log(data);
+});
 ````
