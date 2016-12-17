@@ -1,3 +1,13 @@
+var twodarray = (arr) => {
+  var keys=arr.shift();
+  return arr.map((i)=>{
+    var o={};
+    for(var j=0;j<keys.length;j++)
+      o[keys[j]] = i[j];
+    return o;
+  });
+}
+
 var GoogleSpreadsheet = require('google-spreadsheet');
 var gsheetweb = {};
 gsheetweb.get = (id, cb) => {
@@ -7,7 +17,8 @@ gsheetweb.get = (id, cb) => {
     var sheet = info.worksheets[0];
     sheet.getRows({}, (err, info) => {
       if(err) throw err;
-      cb(info);
+      var objarr = twodarray(info);
+      cb(objarr);
     });
   });
 }
