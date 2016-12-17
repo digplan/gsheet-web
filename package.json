@@ -12,5 +12,6 @@
   "dependencies" : { 
     "google-spreadsheet" : ""
   },
-  "version"       : "0.0.4"
+  "runkitExampleFilename" : "test.js",
+  "version"       : "0.0.5"
 }
