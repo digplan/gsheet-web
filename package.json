@@ -10,7 +10,7 @@
  	  "url": "git://github.com/digplan/gsheet-web"
   },
   "dependencies" : { 
-    "google-spreadsheet" : ""
+    "request" : ""
   },
   "runkitExampleFilename" : "test.js",
   "version"       : "2.0.0"
