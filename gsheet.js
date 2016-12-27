@@ -1,16 +1,10 @@
-var twodarray = (arr) => {
-  var keys=arr.shift();
-  return arr.map((i)=>{
-    var o={};
-    for(var j=0;j<keys.length;j++)
-      o[keys[j]] = i[j];
-    return o;
-  });
-};
+var twodarray = require('twodarray');
+var request = require('request');
+var xml2js = require('xml2js');
 
 function gsheet(id, cb){
-  require('request')(`https://spreadsheets.google.com/feeds/list/${id}/od6/public/values`, (e,r,b)=>{
-      var parseString = require('xml2js').parseString;
+  request(`https://spreadsheets.google.com/feeds/list/${id}/od6/public/values`, (e, r, b)=>{
+      var parseString = xml2js.parseString;
       parseString(b, function (err, result) {
          if(err) throw err;
          var ret = [];
@@ -31,4 +25,3 @@ function gsheet(id, cb){
   });
 }
 
-module.exports = gsheet;
