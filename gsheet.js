@@ -2,7 +2,7 @@ var twodarray = require('twodarray');
 var request = require('request');
 var xml2js = require('xml2js');
 
-function gsheet(id, cb){
+function gsheetweb(id, cb){
   request(`https://spreadsheets.google.com/feeds/list/${id}/od6/public/values`, (e, r, b)=>{
       var parseString = xml2js.parseString;
       parseString(b, function (err, result) {
@@ -25,3 +25,4 @@ function gsheet(id, cb){
   });
 }
 
+module.exports = gsheetweb;
