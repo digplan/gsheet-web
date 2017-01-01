@@ -1,7 +1,16 @@
-Pull Public Google Spreadsheet as a JSON file (array of objects).  Simple.
+Simple no-auth pull data from a Public Google Spreadsheet.
 ````
-var gsheet = require('gsheet-web');
-gsheet('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo', function(data){
-  console.log(data);  // array of objects
+try {
+  var gsheet = require('.');
+} catch(e) {
+  var gsheet = require('gsheet-web');
+}
+
+gsheet('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo', (data)=>{
+  console.log('Try callback ', data.length);  // array of objects
+});
+
+gsheet('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo').then((data)=>{
+  console.log('Try promise ', data.length);
 });
 ````

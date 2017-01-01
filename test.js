@@ -5,5 +5,9 @@ try {
 }
 
 gsheet('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo', (data)=>{
-  console.log(data);  // array of objects
+  console.log('Try callback ', data.length);  // array of objects
+});
+
+gsheet('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo').then((data)=>{
+  console.log('Try promise ', data.length);
 });
