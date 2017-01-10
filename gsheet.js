@@ -8,7 +8,7 @@ module.exports = (id, cb)=>{
         if(e) throw Error(e);
         var parseString = xml2js.parseString;
         parseString(b, function (err, result) {
-           if(err) throw err;
+           if(err) throw Error('Make sure this sheet has been Published (File--Publish to the web)');
            var ret = [];
            var keys = Object.keys(result.feed.entry[0])
              .filter((name)=>{ return !!name.match(/gsx/) })
