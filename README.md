@@ -14,3 +14,12 @@ gsheet('1KPJr7wBEzicgrqukhEZBdGCqNQQB-ldrRrS0lxmq_qo').then((data)=>{
   console.log('Try promise ', data.length);
 });
 ````
+Browser
+````
+<script src=https://rawgit.com/digplan/gsheet-web/master/gsheet-web-browser.js ></script>
+<script>
+  (async ()=>{
+    var array = await gsheet('sheetid')
+  })()
+</script>
+````
